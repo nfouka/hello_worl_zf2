@@ -14,13 +14,15 @@
                'defaults' => array(
                   'controller' => 'Helloworld\Controller\Index',
                   'action'     => 'index',
-                )
-             )
+                ),
+                 
+             ),
+             
           )
        )
     ),
        'modules' => array(
-       'Application',
+      
        'Helloworld', 
      ),
     'controllers' => array(
@@ -28,4 +30,8 @@
              'Helloworld\Controller\Index'
                         => 'Helloworld\Controller\IndexController',
           )
-    )) ; 
+    )
+       
+       
+       
+       ) ; 

@@ -10,42 +10,54 @@
     </div>
   
    <h1>Controller </h1>
-   
-  <code>
-
-   return array(
-        'view_manager' => array(
-            'template_path_stack' => array(__DIR__ . '/../view')
-     )
-, <br/>
-    'router' => array(
-      'routes'      => array(
-         'write-hello-world' => array(<br/>
-             'type' => 'Zend\Mvc\Router\Http\Literal', 
-             'options' => array(
-               'route'   => '/write-hello',
-               'defaults' => array(<br/>
-                  'controller' => 'Helloworld\Controller\Index',
-                  'action'     => 'index',
-                )
-             )
-          )
-       )
-    ),
-    <br/>
-       'modules' => array(
-       'Application',
-       'Helloworld', 
-     ),
-    'controllers' => array(<br/>
-         'invokables' => array(
-             'Helloworld\Controller\Index'
-                        => 'Helloworld\Controller\IndexController',
-          )
-    )) ; 
-    
-  </code>
   
-  <h2>
-     Param 1 : <?php echo $this->par1 ?>
-  </h2>
+   <h2>Object Collection from PHP Array</h2>
+   
+   <table class="table table-bordered">
+            <tr>
+                <th>Name</th>
+                <th>Job</th>
+                <th>Adress</th>
+                <th>Salary</th>
+            </tr>
+            
+
+     <?php
+        
+        foreach ($this->all as $person ) { 
+                print '<tr>' ; 
+                print '<td>'.$person->getName().'</td>' ; 
+                print '<td>'.$person->getJob().'</td>' ; 
+                print '<td>'.$person->getAdress().'</td>' ; 
+                print '<td>'.$person->getSalary().'</td>' ; 
+                print '</tr>' ; 
+        }
+     ?>
+            
+</table>
+   
+   
+   <h2>Object Collection from DataBase Mysql </h2>
+   
+   <table class="table table-bordered">
+            <tr>
+                <th>MESSAGE LOG</th>
+                <th>TYPE</th>
+                <th>HOSTNAME</th>
+                <th>LOCATION</th>
+            </tr>
+            
+
+     <?php
+        
+        foreach ($this->res as $result ) { 
+                print '<tr>' ; 
+                print '<td>' ;  print $result['message'] ;  print '<td>' ; 
+                print '<td>' ;  print $result['type']    ;  print '<td>' ; 
+                print '<td>' ;  print $result['hostname'] ;  print '<td>' ; 
+                print '<td>' ;  print $result['location'] ;  print '<td>' ; 
+                print '</tr>' ; 
+        }
+     ?>
+            
+</table>
