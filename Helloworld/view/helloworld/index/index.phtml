@@ -1,0 +1,51 @@
+
+
+   <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1><?php echo $this->text; ?></h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+  
+   <h1>Controller </h1>
+   
+  <code>
+
+   return array(
+        'view_manager' => array(
+            'template_path_stack' => array(__DIR__ . '/../view')
+     )
+, <br/>
+    'router' => array(
+      'routes'      => array(
+         'write-hello-world' => array(<br/>
+             'type' => 'Zend\Mvc\Router\Http\Literal', 
+             'options' => array(
+               'route'   => '/write-hello',
+               'defaults' => array(<br/>
+                  'controller' => 'Helloworld\Controller\Index',
+                  'action'     => 'index',
+                )
+             )
+          )
+       )
+    ),
+    <br/>
+       'modules' => array(
+       'Application',
+       'Helloworld', 
+     ),
+    'controllers' => array(<br/>
+         'invokables' => array(
+             'Helloworld\Controller\Index'
+                        => 'Helloworld\Controller\IndexController',
+          )
+    )) ; 
+    
+  </code>
+  
+  <h2>
+     Param 1 : <?php echo $this->par1 ?>
+  </h2>
