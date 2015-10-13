@@ -23,30 +23,7 @@
               
               $statement = $adapter->createStatement($sql);
               $result = $statement->execute();
-              
-              
-              
-              /*
-              $adapter = new \Zend\Db\Adapter\Adapter( array(
-                    'driver' => 'Pdo',
-                    'dsn' => 'mysql:dbname=drupal;hostname=localhost',
-                    'username' => 'root',
-                    'password' => 'lonelyness',
-                    'driver_options' => array(
-                        \PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
-                    ),
-                    )) ; 
- 
-              $isconnected = $adapter->getDriver()->getConnection() ; 
-              $value = $isconnected->execute("SELECT *
-                            FROM cachetags
-                            LIMIT 0 , 30") ; 
-  
-              foreach ($value as $value){
-                  print $value['tag']."<br/>" ; 
-              }
-               * 
-               */
+             
               
               $p1 = new \Helloworld\Model\Person('Nadir Fouka', '47,Rue de la paix - Grenoble', '78500€','PHP Developer') ; 
               $p2 = new \Helloworld\Model\Person('Pierre Anderson', '347,Rue de la paix - Paris', '56600€','Java Developer') ; 
