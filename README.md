@@ -1,4 +1,4 @@
-<h1> hello_world_zf2 </h1>
+<h1> Hello world ZF2 </h1>
 First application with Zend Framework 2.5.2 <br/>
 
 <h2>How to use this module ? </h2>
